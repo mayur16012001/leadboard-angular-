@@ -1,0 +1,40 @@
+<div class="row justify-content-md-center ">
+    <div class="col-lg">
+        <div>
+            <div>
+                <div class="row" id="innerdiv" style="padding:12px 12px;font-weight: bolder;margin: 10px 0px;"
+                [ngStyle]="{'background':player.active === true ? 
+                'linear-gradient(-270deg, #64dd17, #ffffff)' : 
+                'linear-gradient(-270deg, red, #ffffff)' }">
+               
+                    <div class="col col-lg" style="align-self: center;text-transform:capitalize">
+                        {{player.name}}
+                    </div>
+                    <div class="col-lg-2">
+                        <a style="cursor: pointer;text-align-last: center" (click)="incrementScore(player.id)" >
+                            <button class="btn" style=" background-color: DodgerBlue;color: white;"><i class="fa fa-plus"></i></button>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 justify-content-md-center " style="padding: 0px;text-align-last: center;" >
+                       <input class="form-control" type="text"value="{{player.score}}" readonly >
+                      </div>
+                    <div class="col-lg-2">
+                        <a style="cursor: pointer;" (click) = "decrementScore(player.id)">
+                            <div *ngIf = "player.active == true && player.score === 0">
+                                <button class="btn" style="background-color: orangered;color: white;"><i class="fa fa-trash"></i></button>
+                            </div>
+                            <div *ngIf = "player.active == true && player.score > 0  ;">
+                                <button class="btn" style="background-color: red;color: white;"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <div *ngIf = "player.active == false">
+                                <button class="btn" style="background-color: #64dd17;color: white;"><i class="fa fa-check"></i></button>
+                            </div>
+                            
+                           
+                        </a>
+                    </div>
+                  </div>
+            </div>            
+        </div>
+    </div>
+</div>

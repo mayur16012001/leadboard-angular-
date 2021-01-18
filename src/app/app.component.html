@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+      <app-players 
+        [players] = "players"
+        (onAddPlayer) = "onAddPlayer($event)"
+        (incrementScore) = "onIncrementScore($event)"
+        (decrementScore) = "onDecrementScore($event)"
+        (showActive) = "onShowActive($event)"
+      >
+      </app-players>
+     
+    </div>
+  </div>
+</div>
+

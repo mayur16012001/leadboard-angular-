@@ -1,0 +1,4 @@
+#innerdiv:hover{
+    transform: scale(1.05);
+    box-shadow: 5px -1px 15px 0px #1E90FF
+}
