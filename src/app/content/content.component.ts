@@ -20,7 +20,7 @@ export class ContentComponent {
   }
 
   incrementScore(id:number){
-    console.log(id);
+    // console.log(id);
     this.increment.emit(id);
   }
   
